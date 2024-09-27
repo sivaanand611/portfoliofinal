@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Works</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: Arial, sans-serif;
+        background-color:whitesmoke;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+      }
+      
+      /* Navbar Styles */
+      header {
+        background-color:plum;
+        padding: 20px;
+        border-radius: 50px;
+        border: 1px;
+      }
+      
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .logo {
+        color:black;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      
+      .nav-items {
+        list-style: none;
+        display: flex;
+      }
+      
+      .nav-items li {
+        margin-left: 30px;
+      }
+      
+      .nav-items li a {
+        text-decoration: none;
+        color:black;
+        font-size: 18px;
+        transition: color 0.3s ease;
+      }
+      
+      .nav-items li a:hover {
+        color: #f9c402;
+      }
+      
+      /* Hamburger Icon */
+      .hamburger {
+        display: none;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+      }
+      
+     
+      /* Projects Section */
+      .projects {
+        padding: 50px 20px;
+        text-align: center;
+      }
+      
+      .projects h1 {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 50px;
+      }
+      
+      .projects-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      
+      .project-card {
+        background-color: #e0e0e0;
+        padding: 20px;
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      
+      }
+      
+      .project-card h3 {
+        font-size: 24px;
+        margin-bottom: 100px;
+        font-weight: bold;
+        color: white;
+      }
+      
+      .project-card p {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+      
+      .view-btn {
+        padding: 10px 20px;
+        background-color:purple;
+        color: white;
+        border: none;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      
+      .view-btn:hover {
+        background-color: #555;
+      }
+      
+      /* Mobile View */
+      @media screen and (max-width: 768px) {
+        .nav-items {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          right: 0;
+          background-color: #333;
+          width: 100%;
+          text-align: center;
+        }
+      
+        .nav-items li {
+          margin: 20px 0;
+        }
+      
+        .hamburger {
+          display: block;
+        }
+      
+        .projects-container {
+          flex-direction: column;
+        }
+      
+        .project-card {
+          margin-bottom: 20px;
+        }
+      }
+      /* Footer Styles */
+footer {
+    background-color:white;
+    padding: 30px 20px;
+    text-align: center;
+    color: #333;
+    margin-top: 50px;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .social-icons {
+    margin-bottom: 20px;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .social-icons span {
+    width: 40px;
+    height: 40px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Hover Animation */
+  .social-icons a:hover img {
+    filter: none;
+    transform: scale(1.2);
+  }
+  
+  footer p {
+    font-size:20px;
+    color:blue;
+  }
+  
+  footer p:hover {
+    color:navy;
+  }
+  
+      
+</style>
+<body>
+  <!-- Navbar Section -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <span>My Portfolio</span>
+      </div>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+      <ul class="nav-items" id="nav-items">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="works.html">My Works</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="projects">
+    <h1>My Works</h1>
+    <div class="projects-container">
+      <!-- Project 1 -->
+      <div class="project-card" style="background-image:url('workf.JPG') ;background-repeat: no-repeat;background-size: cover;">
+        <h3>Formvalidation</h3>
+        <a href="https://sivaanand611.github.io/formvalidation/"><button class="view-btn">View</button></a>
+        
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card" style="background-image:url('workb.JPG') ;background-repeat: no-repeat;background-size: cover;">
+        <h3>sample webpage</h3>
+        
+        <a href="https://sivaanand611.github.io/boutique/"><button class="view-btn">View</button></a>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card" style="background-image:url('workla.JPG') ;background-repeat: no-repeat;background-size: cover;">
+        <h3>Landing webpage</h3>
+        <a href="https://sivaanand611.github.io/landingpage/"><button class="view-btn">View</button></a>
+        
+      </div>
+    </div>
+  </section><!-- Footer Section -->
+ 
+  
+
+  <script >// JavaScript to toggle the visibility of the menu items
+    const hamburger = document.getElementById('hamburger');
+    const navItems = document.getElementById('nav-items');
+    
+    hamburger.addEventListener('click', () => {
+      if (navItems.style.display === 'flex') {
+        navItems.style.display = 'none';
+      } else {
+        navItems.style.display = 'flex';
+      }
+    });
+    </script>
+</body>
+</html>

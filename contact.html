@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  
+</head>
+<style>** {
+   
+    box-sizing: border-box;
+  }
+  
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color:whitesmoke;
+  }
+  /* Navbar Styles */
+  header {
+        background-color:plum;
+        
+        border-radius: 40px;
+        border: 1px;
+      }
+      
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .logo {
+        color:black;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      
+      .nav-items {
+        list-style: none;
+        display: flex;
+      }
+      
+      .nav-items li {
+        margin-left: 30px;
+      }
+      
+      .nav-items li a {
+        text-decoration: none;
+        color:black;
+        font-size: 18px;
+        transition: color 0.3s ease;
+      }
+      
+      .nav-items li a:hover {
+        color: #f9c402;
+      }
+      
+      /* Hamburger Icon */
+      .hamburger {
+        display: none;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+      }
+      
+  
+ 
+  /* Contact Section */
+  .contact {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 60vh;
+  }
+  
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .contact-left,
+  .contact-right {
+    flex: 1;
+    padding: 30px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin: 0 20px;
+  }
+  
+  .contact-left {
+    background-color:#f5f5f5;
+    margin-top:20px ; 
+  }
+  .contact-right{
+    background-color:#f5f5f5;
+    border: 1px solid plum;
+    box-shadow: plum;
+    padding:10px  20px;
+  }
+  
+  .contact-left h2,
+  .contact-right h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .contact-left p,
+  .contact-right ::placeholder {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .contact-left i {
+    margin-right: 10px;
+  }
+  
+  .icon-email:before {
+    content: "📧";
+  }
+  
+  .icon-phone:before {
+    content: "📞";
+  }
+  
+  .icon-address:before {
+    content: "🏠";
+  }
+  
+  /* Contact Form */
+  .contact-right form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-right input,
+  .contact-right textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-right button {
+    padding: 10px 20px;
+    background-color:plum;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .contact-right button:hover {
+    background-color: #555;
+  }
+  
+  /* Mobile View */
+  @media screen and (max-width: 768px) {
+    .nav-items {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #333;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .nav-items li {
+      margin: 20px 0;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .contact-container {
+      flex-direction: column;
+    }
+  
+    .contact-left,
+    .contact-right {
+      margin: 20px 0;
+    }
+  }
+  footer {
+    background-color:plum;
+    padding: 30px 20px;
+    text-align: center;
+    color: #333;
+    margin-top: 50px;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .social-icons {
+    margin-bottom: 10px;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .social-icons span {
+    width: 40px;
+    height: 40px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Hover Animation */
+  .social-icons a:hover img {
+    filter: none;
+    transform: scale(1.2);
+  }
+  
+  footer p {
+    font-size:14px;
+    color:blue;
+  }
+  
+  footer p:hover {
+    color:navy;
+  }
+  
+  </style>
+<body>
+  <!-- Navbar Section -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <span>My Portfolio</span>
+      </div>
+      <!-- Hamburger Icon for mobile view -->
+      <div class="hamburger" id="hamburger">
+        &#9776; <!-- Three-line icon (hamburger) -->
+      </div>
+      <ul class="nav-items" id="nav-items">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="Works.html">My works</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <div class="contact-container">
+      <div class="contact-left">
+        <h2>Contact Info</h2>
+        <p><i class="icon-email"></i> Email: your-email@example.com</p>
+        <p><i class="icon-phone"></i> Phone: +1234567890</p>
+        <p><i class="icon-address"></i> Address: 1234 Your Street, City, Country</p>
+
+      </div>
+
+      <div class="contact-right">
+        <h2> Have any Question? Send Me a Message</h2>
+        <form action="#">
+          
+          <input type="text" id="name" name="name" placeholder="Name" required>
+
+          
+          <input type="email" id="email" name="email" placeholder="Email" required>
+
+          <textarea id="message" name="message" rows="5" required placeholder="Message"></textarea>
+
+          <button type="submit">  Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-container">
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/" target="_blank">
+       <i class="fa-brands fa-linkedin" style="font-size: 30px;"></i>
+        </a>
+        
+        <a href="https://www.instagram.com/" target="_blank">
+            <i class="fa-brands fa-instagram"  style="font-size: 30px;"></i>
+        </a>
+        <a href="https://github.com/" target="_blank">
+            <i class="fa-brands fa-github"  style="font-size: 30px;"></i>
+        </a>
+        <a href="https://yourblog.com/" target="_blank">
+            <i class="fa-brands fa-whatsapp"  style="font-size: 30px;"></i>
+        </a>
+      </div>
+      <p>&copy; 2024 sivananthini. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>// JavaScript to toggle the visibility of the menu items
+    const hamburger = document.getElementById('hamburger');
+    const navItems = document.getElementById('nav-items');
+    
+    hamburger.addEventListener('click', () => {
+      if (navItems.style.display === 'flex') {
+        navItems.style.display = 'none';
+      } else {
+        navItems.style.display = 'flex';
+      }
+    });
+    </script>
+</body>
+</html>

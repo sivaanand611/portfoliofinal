@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: Arial, sans-serif;
+        background-color:whitesmoke;
+      }
+      
+      /* Navbar Styles */
+      header {
+        background-color:plum;
+        padding: 20px;
+        border-radius: 50px;
+        border: 1px;
+      }
+      
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .logo {
+        color:black;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      
+      .nav-items {
+        list-style: none;
+        display: flex;
+      }
+      
+      .nav-items li {
+        margin-left: 30px;
+      }
+      
+      .nav-items li a {
+        text-decoration: none;
+        color:black;
+        font-size: 18px;
+        transition: color 0.3s ease;
+      }
+      
+      .nav-items li a:hover {
+        color: #f9c402;
+      }
+      
+      /* Hamburger Icon */
+      .hamburger {
+        display: none;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+      }
+      
+      /* About Me Section */
+      .about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 20px;
+        background-color: #fff;
+      }
+      
+      .about-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 800px;
+      }
+      
+      .profile-pic {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+      }
+      
+      .about-text {
+        color: #333;
+      }
+      
+      .about-text h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+      
+      .about-text p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+      
+      .btn {
+        display: inline-block;
+        background-color:plum;
+        color: black;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+      
+      .btn:hover {
+        background-color: #e0ac02;
+      }
+      
+      /* Mobile View - Toggle menu */
+      @media screen and (max-width: 768px) {
+        .nav-items {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          right: 0;
+          background-color: #333;
+          width: 100%;
+          text-align: center;
+        }
+      
+        .nav-items li {
+          margin: 20px 0;
+        }
+      
+        .hamburger {
+          display: block;
+        }
+      
+        .navbar {
+          justify-content: space-between;
+        }
+      }
+      
+</style>
+<body>
+  <!-- Navbar Section -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <span>My Portfolio</span>
+      </div>
+      <!-- Hamburger Icon for mobile view -->
+      <div class="hamburger" id="hamburger">
+        &#9776; <!-- Three-line icon (hamburger) -->
+      </div>
+      <ul class="nav-items" id="nav-items">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="works.html">My works</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Me Section -->
+  <section class="about" id="about">
+    <div class="about-content">
+      <img src="image.jpg" class="profile-pic" alt="Profile Picture">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <h2>This is sivananthini</h2>
+        <p>
+          I am a passionate web developer with a focus on frontend technologies. I have worked on various web applications that aim to create a seamless and engaging user experience. My journey in coding started from a desire to blend creativity with technology. Over the years, I've honed my skills in HTML, CSS, JavaScript, and other frameworks. I love tackling challenges, continuously learning, and improving my skills. My goal is to develop efficient and innovative solutions that provide meaningful impact to users.
+        </p>
+        <a href="resume.pdf.pdf" class="btn" download>Download CV</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // JavaScript to toggle the visibility of the menu items
+const hamburger = document.getElementById('hamburger');
+const navItems = document.getElementById('nav-items');
+
+hamburger.addEventListener('click', () => {
+  if (navItems.style.display === 'flex') {
+    navItems.style.display = 'none';
+  } else {
+    navItems.style.display = 'flex';
+  }
+});
+
+  </script>
+</body>
+</html>

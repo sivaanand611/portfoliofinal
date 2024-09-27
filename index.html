@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: Arial, sans-serif;
+        background-color:whitesmoke;
+      }
+      
+      /* Navbar Styles */
+      header {
+        background-color:plum;
+        padding: 20px;
+        border-radius: 50px;
+        border: 1px;
+      }
+      
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+      }
+      
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+      
+      .logo img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+      
+      .logo span {
+        color:black;
+        font-size: 20px;
+        margin-left: 10px;
+        font-weight: bold;
+      }
+      
+      /* Hide menu items in mobile view */
+      .nav-items {
+        list-style: none;
+        display: flex;
+      }
+      
+      .nav-items li {
+        margin-left: 30px;
+      }
+      
+      .nav-items li a {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+      
+      .nav-items li a:hover {
+        color: #f9c402;
+      }
+      
+      /* Hamburger Icon */
+      .hamburger {
+        display: none; /* Initially hidden */
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+      }
+      
+      /* Mobile view adjustments */
+      @media screen and (max-width: 768px) {
+        .nav-items {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 70px;
+          right: 0;
+          background-color: #333;
+          width: 100%;
+          text-align: center;
+        }
+      
+        .nav-items li {
+          margin: 20px 0;
+        }
+      
+        .hamburger {
+          display: block; /* Show the hamburger icon in mobile view */
+        }
+        
+        .navbar {
+          justify-content: space-between;
+        }
+      }
+      
+      /* Hero Section */
+      .hero {
+        height: 100vh;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .hero-content {
+        color:rgb(71, 69, 69);
+        animation: fadeIn 2s ease-in-out;
+      }
+      
+      .hero-title {
+        font-size: 48px;
+        font-weight: bold;
+      }
+      
+      .hero-domain {
+        font-size: 35px;
+        margin: 20px 0;
+        font-weight: bold;
+
+      }
+      
+      .profile-pic {
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        margin-top: 20px;
+        animation: bounce 2s infinite;
+      }
+      
+      /* Animations */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-15px);
+        }
+        60% {
+          transform: translateY(-7px);
+        }
+      }
+      
+</style>
+<body>
+  <!-- Navbar Section -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="image.jpg" alt="Profile Picture">
+        <span>My Portfolio</span>
+      </div>
+      <!-- Hamburger Icon for mobile view -->
+      <div class="hamburger" id="hamburger">
+        &#9776; <!-- Three-line icon (hamburger) -->
+      </div>
+      <ul class="nav-items" id="nav-items">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="works.html">My Works</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1 class="hero-title">Hi,This is<br><span style="color:plum;"> Sivananthini Velmurugan</span> </h1>
+      <p class="hero-domain">I'm a Front-End-Developer</p>
+      <img src="image.jpg" class="profile-pic" alt="Profile Picture">
+    </div>
+  </section>
+
+  <!-- Optional JavaScript Section for Animations -->
+  <script >
+    // JavaScript to toggle the visibility of the menu items
+const hamburger = document.getElementById('hamburger');
+const navItems = document.getElementById('nav-items');
+
+hamburger.addEventListener('click', () => {
+  if (navItems.style.display === 'flex') {
+    navItems.style.display = 'none';
+  } else {
+    navItems.style.display = 'flex';
+  }
+});
+
+  </script>
+</body>
+</html>
